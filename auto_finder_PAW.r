@@ -163,7 +163,7 @@ find_best_pair(C_raw, top_n, "_C", "Exp C")
 find_best_pair(D_raw, top_n, "_D", "Exp D")
 
 # check the clustering
-A_sl <- SL_norm(A_raw, "_A")
+A_sl <- SL_norm(A_raw, "_A", print_factors = FALSE)
 plotMDS(log10(A_sl), main = "Experiment A")
 
 pairs.panels(log10(A_sl), main = "Exp. A - all 10")
