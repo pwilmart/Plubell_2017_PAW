@@ -6,8 +6,7 @@ library(limma)
 library(psych)
 library(Matrix)
 
-# load the raw data
-# the table starts in Row 5
+# load the raw data: the table starts in Row 5
 # there are extra lines at the bottom - need to stop before the end
 data_import <- read_tsv("PAW_labeled_grouped_protein_summary_TMT_8.txt", 
                         skip = 4, n_max = 4437, guess_max = 4437)
@@ -16,6 +15,7 @@ data_import <- read_tsv("PAW_labeled_grouped_protein_summary_TMT_8.txt",
 data_all <- filter(data_import, is.na(Filter))
 
 # check number of rows before and after filtering
+print("Table lengths before and after filtering:")
 cat(nrow(data_import), nrow(data_all))
 
 # make a data frame for each TMT-plex (and drop zeros)
