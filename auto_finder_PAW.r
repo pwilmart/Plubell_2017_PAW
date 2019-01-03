@@ -167,3 +167,6 @@ A_sl <- SL_norm(A_raw, "_A", print_factors = FALSE)
 plotMDS(log10(A_sl), main = "Experiment A")
 
 pairs.panels(log10(A_sl), main = "Exp. A - all 10")
+
+# log the session
+sessionInfo()
